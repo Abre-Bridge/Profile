@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family:sans-serif;
+}
+
+:root{
+     --background: rgb(0, 0, 0);
+     --second-background: rgb(0, 0, 0);
+
+}
+
+body{
+     min-height: 100vh;
+     background-color: var(--background);
+     background-image: url('./icons/bg.jpg');
+     background-size: cover;
+}
+
+nav{
+     position: fixed;
+     top: 0;
+     width: 100%;
+     padding: 2em 15%;
+     justify-content: space-between;
+     align-items: center;
+     display: flex;
+     background-color: var(--second-background);
+     backdrop-filter: blur(10px);
+     font-weight:800;
+     z-index: 10000;
+     height:20%;
+}
+
+ul{
+     display: flex;
+     align-items: center;
+     gap: 3em;
+}
+
+nav ul a{
+     opacity: 70%;
+     color: rgba(255, 255, 255, 0.842);
+     transition: 0.2s ease-in-out;
+}
+
+nav ul a:hover{
+     opacity: 100%;
+     color: white;
+}
+
+#lg{
+     color: white;
+     margin-left: -50px;
+     font-size: 20px;
+     opacity: 95%;
+     transition: 0.1s ease-in-out;
+}
+
+#lg:hover{
+     opacity: 100%;
+}
+
+
+#menu{
+     height: 30px;
+     width: 30px;
+     color: transparent;
+     display: none;
+}
+
+#logo{
+     height: 80px;
+     width: 80px;       
+}
+
+
+.btn{
+     border-radius: 10px;
+     border: 3px solid white;
+     padding: 0.5em 1em;
+     color: rgb(255, 255, 255);   
+     font-size: 0.9em;
+     font-weight: 900;
+     background-color:var(--background);
+     transition: 0.3s ease-in-out;
+     margin-right: 1em;
+}
+
+.btn:hover{
+     border-color: black;
+     background-color: white;
+     color:var(--background);
+}
+.btn-2{
+     border-radius: 10px;
+     border: 3px solid black;
+     padding: 0.5em 1em;
+     color: var(--background);   
+     font-size: 0.9em;
+     font-weight: 900;
+     background-color:white;
+     transition: 0.3s ease-in-out;
+}
+
+.btn-2:hover{
+     border-color: white;
+     background-color: var(--background);
+     color:white;
+}
+
+span{
+     background: linear-gradient(to right,rgb(4, 224, 253),rgb(0, 255, 221));
+     background-clip: text;
+     color: transparent;
+}
+
+#pr-p{
+     height: 30vw;
+     width: 30vw;
+     border-radius: 50%;
+     margin-right: -150px;
+}
+
+section{
+    min-height: 100vh ;
+    padding: 5% 15%;
+    backdrop-filter: blur(15px);
+}
+
+#home{
+    display: flex;
+    
+    align-items: center;
+    gap: 2em;
+}
+
+#info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-right: 150px;
+    gap: 0.5em;
+    max-width: 600px;
+}
+
+h1{
+    font-size: 2em ;
+    font-weight: 800;
+    color: white;
+}
+
+h2{
+    color: white;
+    opacity: 80%;
+    font-weight: 700px;
+}
+
+h3{
+     color: white;
+     font-style: italic;
+}
+
+
+
+.btn-box{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+::-webkit-scrollbar{
+    width: 50px;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: linear-gradient(to bottom,rgb(4, 224, 253),rgb(0, 255, 221));
+}
+
+.abt-box{
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     margin-top: 15%;
+     gap: 3em;
+     text-align: center;
+}
+.lists{
+     
+     display: flex;
+     flex-direction: row;
+     gap: 10em;
+     margin-left: 25%;
+}
+.skills, .hobby h2 {
+      text-align: left;
+}
+
+.abt-box h2:hover {
+      opacity: 100%;   
+}
+
+#about{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 2em;
+}
+
+.skills{
+     display: block;
+     text-align: left;
+     gap: 0em;
+}
+
+.abt-box ul{
+     font-size: 1em;
+     font-weight: 900;
+     display: flex;
+     flex-direction: column;
+     color: white;
+     gap: 1.1em;
+     opacity: 80%;
+     align-items: baseline;
+}
+
+
+#about li{
+     list-style: circle;
+}
+
+
+.abt-box ul li{
+     display: block;
+     gap: 0.2em;
+     font-size:1em;
+     transition: 0.3s ease-in-out;
+}
+
+.abt-box ul li:hover{
+     opacity: 100%;
+     transform:translateX(30px);
+}
+
+
+
+.abt-2 h2{
+     font-size: 2.5em;
+}
+
+.header{
+     text-align:center;
+     font-size: 3.5em;
+     margin: 0.5em 0;
+     margin-top: 15%;
+}
+
+.services-container{
+     display: grid;
+     grid-template-columns:  repeat(auto-fit,minmax(250px,1fr));
+     gap: 2em;
+}
+
+.box{
+     border: 3px solid rgb(49,49,49);
+     border-radius: 0.5em;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     overflow: hidden;
+     object-fit: cover;
+     padding: 3em;
+     gap: 2em;
+     color: white;
+     cursor:pointer;
+     transition: 0.3s ease-in-out;
+}
+
+.box:hover{
+     border: 3px solid rgb(100,100,100);
+}
+
+.box p{
+     opacity: 0.8;
+     font-size: 0.7em;
+}
+
+.box h1{
+     font-size: 1.5em;
+     text-align: center;
+}
+
+.box img{
+     min-width: 25px;
+     border-radius: 0.5em;
+}
+
+.form{
+     display: flex;
+     flex-direction: column;
+     gap: 0.5em;
+     height: 25em;
+     width: 40em;
+     margin-left:15%;
+     border-radius: 2.5em;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(90px);
+     border: 5px solid white;
+}
+
+.form label{
+     font-size: 1.5em;
+     font-weight: 800;
+}
+
+input{
+     background-color: rgba(255, 255, 255, 0.932);
+     width: 20em;
+     height: 3em;
+     font-size: 1em;
+     border-radius: 15px;
+     font-weight: 800;
+     border-top: none;
+     border-left: none;
+     border-right: none;
+     border-bottom:5px solid rgb(22, 22, 22);
+}
+
+.submit{
+     width: 6.5em;
+     height: 2.7em;
+     font-weight: 800;
+     font-size: 1em;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.842);
+     border-radius: 10px;
+}
+
+.submit:hover{
+     color: black;
+     border: 5px solid black;
+     background-color: rgba(255, 255, 255, 0.527);
+}
+
+.Icons{
+    position: absolute;
+    height:60px;
+    width: 250px;
+    background-color:rgba(255, 255, 255, 0.938);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    margin-top: 500px;
+    margin-left: 0px;
+    border: 2px solid white;
+}
+.Icons img{
+    height: 40px;
+    width: 40px;
+    opacity: 85%;
+    border-radius: 100%;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-width: 30px;
+    color: white;
+}
+
+.Icons img:hover{
+     opacity: 100%;
+     box-shadow: 0px 05px 030px  20px rgb(255, 255, 255) ;   
+ }
